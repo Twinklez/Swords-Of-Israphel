@@ -118,10 +118,4 @@ public class SOIHealing extends ItemSword
     {
             return "/soi/gui/items.png";
     }
-    
-    @Override 
-    public void func_94581_a(IconRegister iconRegister)
-    {
-    	iconIndex = iconRegister.func_94245_a("soi:healingSword");
-    }
 }

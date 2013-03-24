@@ -50,8 +50,7 @@ public class SwordsofIsraphel extends BaseMod
 	@MLProp public static int idFlameSword = 10003;
 	@MLProp public static int idGhastSword = 10004;
 	@MLProp public static int idPruqaSword = 10005;
-	/** public int comp = this.name; */
-	/** public int name = Windows.getComputerLabelNameManually; */
+	
 	@PreInit
 	public void preInit(FMLPreInitializationEvent event)
 	{
@@ -89,39 +88,7 @@ public class SwordsofIsraphel extends BaseMod
 		GameRegistry.addRecipe(new ItemStack(flameSword, 1), new Object[] { " X ", " M ", " Y ", 'X', Item.coal, 'M', Item.flintAndSteel, 'Y', Item.blazeRod });
 		GameRegistry.addRecipe(new ItemStack(ghastSword, 1), new Object[] { " X ", " M ", " Y ", 'X', Item.ghastTear, 'M', Item.gunpowder, 'Y', Item.blazeRod });
 		GameRegistry.addRecipe(new ItemStack(pruqaSword, 1), new Object[] { " X ", "ZAZ", " Y ", 'X', Item.diamond, 'Z', Block.obsidian, 'A', Item.ingotIron, 'Y', Item.stick });
-	}/**
-
-	public void installationLoader()
-	{
-		Minecraft mc;
-		JImport.getImportsToImport(mc);
-		if (FMLInstallation.isFileInModsFolder(com.twinklez.SecretForest.class))
-		{
-			throw new Exception("This mod is suppose to go in the minecraft.jar, not the mods folder!");
-			FMLInstallation.unload();
-			try { Thread.sleep(1000L) } catch (Exception e) { }
-			FMLInstallation.load();
-			JFile.getDirectoryToLoad("Swords of Israphel v0.2 [1.5]" + ".zip");
-			JFile.copyFiles();
-			JFile.getNextLocation("C:\Users\" + Windows.getComputerName(comp) + \AppData\Roaming\.minecraft\bin\minecraft" + ".jar");
-			JFile.pasteFiles();
-			if (JFile.allowCopyForFiles)
-			{	
-				return true;
-			}
-			else if (JFile.Errors.GET_ERROR_LEVEL.LEVEL_1)
-			{
-				throw new Exception("Please force-update your Minecraft, and reinstall it");
-			}
-			else
-			{
-				JPopUp.sendPopUpMSG("Forge has automatically installed the fix for you! Preparing to launch the game...");
-				JPopUp.displayLoadingScreen();
-				mc.startGame();
-				JPopUp.getLoadingScreenFinishTime(3030F);	
-			}
-		}		
-	}*/
+	}
 	
 	public void addRenderer(Map map)
 	{
@@ -135,7 +102,7 @@ public class SwordsofIsraphel extends BaseMod
 	
 	public String getVersion()
 	{
-		return "1.5";
+		return "1.5.1";
 	}
 
 }
